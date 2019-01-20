@@ -1,4 +1,4 @@
-const developers = ["ايدي الاونر"]//Toxic Codes
+const developers = ["475797943480352789"]//Toxic Codes
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
       if (!developers.includes(message.author.id)) return;
@@ -35,3 +35,5 @@ if (message.content.startsWith(adminprefix + 'avatar')) {//Toxic Codes
     message.channel.send(`Changing The Avatar To :**${argresult}** `);//Toxic Codes
 }
 });//Toxic Codes
+
+client.login(process.env.BOT_TOKEN);
