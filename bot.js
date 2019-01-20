@@ -1,8 +1,8 @@
 const developers = ["475797943480352789"]//Toxic Codes
-client.on('message', message => {//Toxic Codes
+Client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
       if (!developers.includes(message.author.id)) return;
-     
+     const adminprefix="$";
   if (message.content.startsWith(adminprefix + 'ply')) {
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
