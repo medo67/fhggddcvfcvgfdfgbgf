@@ -1,8 +1,19 @@
-const developers = ["475797943480352789"]//Toxic Codes
-Client.on('message', message => {//Toxic Codes
-    var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
-      if (!developers.includes(message.author.id)) return;
-     const adminprefix="$";
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+
+
+
+
+
+const adminprefix = "$";//FRAS
+const devs = ['475797943480352789','486701400152342528'];//FRAS
   if (message.content.startsWith(adminprefix + 'ply')) {
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
