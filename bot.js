@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+cconst Discord = require('discord.js');
 const client = new Discord.Client();
 
 
@@ -38,10 +38,20 @@ client.user.setAvatar(argresult);
 if (message.content.startsWith(adminprefix + 'str')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
+	
+	if (message.content.startsWith(adminprefix + 'setw')) {
+  client.user.setActivity(argresult, {type:'wat'});//Toxic Codes
+    	
+message.channel.send(<code data-enlighter-language="generic" class="EnlighterJSRAW">**<img draggable="false" class="emoji" alt="✅" 
+
+if (message.content.startsWith(adminprefix + 'lis')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(<code data-enlighter-language="generic" class="EnlighterJSRAW">**<img draggable="false" class="emoji" alt="✅" 
+	
 }
 });
 
 
 
-
 client.login(process.env.BOT_TOKEN);
+
