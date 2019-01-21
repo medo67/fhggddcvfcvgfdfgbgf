@@ -12,39 +12,36 @@ client.on('ready', () => {
 
 
 
-const adminprefix = "$";//FRAS
+
+
+
+
+const adminprefix ="$";//FRAS
 const devs = ['475797943480352789','486701400152342528'];//FRAS
-  if (message.content.startsWith(adminprefix + 'ply')) {
-    client.user.setGame(argresult);
-      message.channel.send(`**✅   ${argresult}**`)
-  } else
-     if (message.content === (adminprefix + "leave")) {//Toxic Codes
-    message.guild.leave();   //Toxic Codes
-  } else  
-  if (message.content.startsWith(adminprefix + 'wat')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
-      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
-  } else
-  if (message.content.startsWith(adminprefix + 'lis')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
-  } else
-  if (message.content.startsWith(adminprefix + 'sets')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/zero");
-      message.channel.send(`**✅**`)//Toxic Codes
-  }
-  if (message.content.startsWith(adminprefix + 'name')) {
-  client.user.setUsername(argresult).then
-      message.channel.send(`Changing The Name To ..**${argresult}** `)
+client.on('message', message => {//FRAS
+  var argresult = message.content.split(` `).slice(1).join(' ');//FRAS
+    if (!devs.includes(message.author.id)) return;//FRAS
+    
+if (message.content.startsWith(adminprefix + 'ply')) {//fras
+  client.user.setGame(argresult);//fras
+    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)//fras
+} else //fras
+  if (message.content.startsWith(adminprefix + 'name')) {//fras
+client.user.setUsername(argresult).then
+    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
 } else
-  if (message.content.startsWith(adminprefix + 'prefix')) {//Toxic Codes
-  client.user.setPrefix(argresult).then
-      message.channel.send(`Changing Prefix ..**${argresult}** `)//Toxic Codes
-} else
-if (message.content.startsWith(adminprefix + 'avatar')) {//Toxic Codes
-  client.user.setAvatar(argresult);
-    message.channel.send(`Changing The Avatar To :**${argresult}** `);//Toxic Codes
+  if (message.content.startsWith(adminprefix + 'avatar')) {
+client.user.setAvatar(argresult);
+  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+      } else     
+if (message.content.startsWith(adminprefix + 'str')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
+    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
-});//Toxic Codes
+});
+
+
+
 
 client.login(process.env.BOT_TOKEN);
