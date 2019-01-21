@@ -1,4 +1,4 @@
-cconst Discord = require('discord.js');
+cconst discord = require('discord.js');
 const client = new Discord.Client();
 
 
