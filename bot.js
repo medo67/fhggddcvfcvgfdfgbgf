@@ -1,4 +1,4 @@
-cconst discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
@@ -36,10 +36,10 @@ client.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
       } else     
 if (message.content.startsWith(adminprefix + 'str')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
-    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
+  client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn	
 }
 });
 
-client.login(process.env.BOT_TOKEN);
 
+
+client.login(process.env.BOT_TOKEN);
